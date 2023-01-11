@@ -38,4 +38,4 @@ jobs:
         run: |
           git add $GITHUB_WORKSPACE/format/converted/*
           git commit -m "Update DAU contents"
-          git push origin main
+          git push origin master
