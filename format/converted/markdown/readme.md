@@ -24,6 +24,8 @@ By reading the Dizzy Rewrite, you acknowledge these warnings.
 
 [>> Read the Dizzy Rewrite](https*/meowcatheorange.github.io/Dizzy-Rewrite/STORY)
 
+[>> Table Of Contents](/format/converted/markdown/master/)
+
 ## Welcome
 Hello, welcome to the DAU/Dizzy Rewrite repository!
 
