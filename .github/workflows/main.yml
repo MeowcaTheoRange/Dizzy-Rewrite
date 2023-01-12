@@ -36,6 +36,6 @@ jobs:
       
       - name: Run git
         run: |
-          git add $GITHUB_WORKSPACE/format/converted/*
+          git add $GITHUB_WORKSPACE/format/converted/* -f
           git commit -m "Update DAU contents"
           git push origin master
