@@ -42,13 +42,13 @@ function DAUTokenizer(string) {
 	var temp = (string.includes("\r\n") ? string.split("\r\n") : string.split("\n"));
 	var linearray = [];
 	temp.forEach((v) => {
-		if (/^\t*\S+/.test(v)) linearray.push(v.replace(/\s*$/, ""));
+		if (/^(\t|\s\s)*\S+/.test(v)) linearray.push(v.replace(/\s*$/, ""));
 	});
 	for (line of linearray) {
 		if (/^\? /.test(line)) {
 			var ine = line.replace(/^\? /, "").split(" :: ");
 			if (ine[1]) {
-				ine[1] = ine[1].split(" @ ");
+				ine[1] = ine[1].split("@");
 				ine[1] = {location: ine[1][0], time: ine[1][1]};
 			}
 			TokenizerCtx.currentChapter = new Chapter(...ine);
@@ -56,13 +56,13 @@ function DAUTokenizer(string) {
 		} else if (/^\- /.test(line)) {
 			var ine = line.replace(/^\- /, "").split(" :: ");
 			TokenizerCtx.currentChapter.characters[ine[0]] = new Character(...ine);
-		} else if (/^(\t\t)|(    )/.test(line)){
-			var ine = line.replace(/^(\t\t)|(    )/, "");
+		} else if (/^(\t\t)|(\s\s\s\s)/.test(line)){
+			var ine = line.replace(/^(\t\t)|(\s\s\s\s)/, "");
 			var sliced = sliceDialogue(ine);
 			TokenizerCtx.currentDialogueBlock.dialogue.push(sliced);
 
-		} else if (/^(\t)|(  )/.test(line)){
-			var ine = line.replace(/^(\t)|(  )/, "");
+		} else if (/^(\t)|(\s\s)/.test(line)){
+			var ine = line.replace(/^(\t)|(\s\s)/, "");
 			TokenizerCtx.currentDialogueBlock = new Dialogue(ine);
 			TokenizerCtx.currentChapter.dialogue.push(TokenizerCtx.currentDialogueBlock);
 		}

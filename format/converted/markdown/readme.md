@@ -45,5 +45,5 @@ In fact, this README page you're reading was originally made in DAU. Don't belie
 
 Anyway, you're free to use DAU to start your fictonal endeavors today. Check out [the reuse guide](/format/converted/markdown/reuse.md) for more info.
 
--- By the way, DAU is licensed under the [GNU GPL v3](https*/www.gnu.org/licenses/gpl-3.0.html), but the *original contents* of the Dizzy Rewrite repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http*/creativecommons.org/licenses/by-nc-sa/4.0/).
+-- By the way, DAU is licensed under the [GNU GPL v3](https*/www.gnu.org/licenses/gpl-3.0.html), but the *original contents* of the Dizzy Rewrite repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http*/creativecommons.org/licenses/by-nc-sa/4.0/). What a mouthful! I hate these licenses. CC BY-NC-SA.
 

@@ -12,7 +12,7 @@ assignees: MeowcaTheoRange
 You can use the GitHub browser or download as ZIP to locate the path
 -->
 
-Dizzy-AU/**story/human-readable/...**
+Dizzy-Rewrite/**format/source/...**
 
 ## Affected excerpt <!--with typo emphasized in Markdown-->
 

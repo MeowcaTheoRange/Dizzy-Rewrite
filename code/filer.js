@@ -15,13 +15,12 @@ function TokenizeFiles(name, output) {
   var folder = path.join("format", "converted", convop.folder);
   var namefolder = path.join("format", "converted", convop.folder, name);
   if (!fs.existsSync(folder)) fs.mkdirSync(folder);
-  if (!fs.existsSync(namefolder)) fs.mkdirSync(namefolder);
+  if (!fs.existsSync(namefolder) && convop.data.length > 1) fs.mkdirSync(namefolder);
   var allFileData = convop.data.map(x=>x.data);
-	fs.writeFileSync(path.join(folder, name + convop.extension), allFileData.join(""));
-  convop.data.forEach((data) => {
+  fs.writeFileSync(path.join(folder, name + convop.extension), allFileData.join(""));
+  if (convop.data.length > 1) convop.data.forEach((data) => {
     fs.writeFileSync(path.join(namefolder, data.name.replace(/[/\\?%*:|"<> ]/g, '_') + convop.extension), data.data);
   })
-	
 }
 
 TokenizeFiles(process.argv[2], process.argv[3]);

@@ -51,7 +51,49 @@ var DAUConverters = {
               x
             ).join("") + "\n\n";
           else plctext = text + "\n\n";
-          currentExport.data[i].data += plctext.replace(/(:\/)|(\/:)/gi, "*");
+          currentExport.data[i].data += plctext
+            .replace(/((?<!\\):\/)|(\/:)/gi, "*")
+            .replace(/((?<!\\):\[)|(\]:)/gi, "**")
+            .replace(/((?<!\\):')|(':)/gi, "`")
+            .replace(/(\\:)/gi, ":");
+        });
+      });
+    });
+
+    return currentExport;
+  },
+  Plaintext (js) {
+    currentExport = new Export("text", ".txt");
+    js.forEach((chapter, i) => {
+      currentExport.data[i] = {
+        data: "",
+        name: chapter.name
+      };
+      currentExport.data[i].data += `${chapter.name}\n`;
+      if (chapter.info) {
+        currentExport.data[i].data += `\t`;
+        if (chapter.info.location) currentExport.data[i].data += `${chapter.info.location}`;
+        if (chapter.info.time) currentExport.data[i].data += `@${chapter.info.time}`;
+        if (chapter.info.time && chapter.info.location) currentExport.data[i].data += `\n`;
+      }
+      currentExport.data[i].data += `\n`;
+      currentExport.data[i].data += `Characters:\n`;
+      Object.entries(chapter.characters).forEach(([_, character]) => {
+        currentExport.data[i].data += `- ${character.name.join(" ")}\n`;
+      });
+      chapter.characters["%"] = narrator;
+      chapter.dialogue.forEach((dialogue) => {
+        currentExport.data[i].data += `\n${chapter.characters[dialogue.speaker].name.join(" ")}\n`;
+        dialogue.dialogue.forEach((text) => {
+          var plctext;
+          if (Array.isArray(text))
+            plctext = "\t" + text.join("") + "\n";
+          else plctext = "\t" + text + "\n";
+          currentExport.data[i].data += plctext
+            .replace(/((?<!\\):\/)|(\/:)/gi, "")
+            .replace(/((?<!\\):\[)|(\]:)/gi, "")
+            .replace(/((?<!\\):')|(':)/gi, "")
+            .replace(/(\\:)/gi, ":");
         });
       });
     });
