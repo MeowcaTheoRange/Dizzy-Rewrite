@@ -22,7 +22,7 @@ Mature content is ahead. Please, be wary of these themes:
 
 By reading the Dizzy Rewrite, you acknowledge these warnings.
 
-[>> Read the Dizzy Rewrite](https*/meowcatheorange.github.io/Dizzy-Rewrite/STORY)
+[>> Read the Dizzy Rewrite](https://meowcatheorange.github.io/Dizzy-Rewrite/STORY)
 
 [>> Table Of Contents](/format/converted/markdown/master/)
 
@@ -34,7 +34,7 @@ The Dizzy Rewrite is a *revamped* version of the original Dizzy AU story.
 
 It's written in DAU, a new markup language made specifically for the Dizzy Rewrite.
 
-You can find the original Dizzy AU story at [MeowcaTheoRange/Dizzy-AU](https*/github.com/MeowcaTheoRange/Dizzy-AU).
+You can find the original Dizzy AU story at [MeowcaTheoRange/Dizzy-AU](https://github.com/MeowcaTheoRange/Dizzy-AU).
 
 ## Hold on, what's DAU?
 DAU is an acronym for **"Dizzy AU"**. Pretty obvious there.
@@ -47,5 +47,5 @@ In fact, this README page you're reading was originally made in DAU. Don't belie
 
 Anyway, you're free to use DAU to start your fictonal endeavors today. Check out [the reuse guide](/format/converted/markdown/reuse.md) for more info.
 
--- By the way, DAU is licensed under the [GNU GPL v3](https*/www.gnu.org/licenses/gpl-3.0.html), but the *original contents* of the Dizzy Rewrite repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http*/creativecommons.org/licenses/by-nc-sa/4.0/). What a mouthful! I hate these licenses. CC BY-NC-SA.
+-- By the way, DAU is licensed under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html), but the *original contents* of the Dizzy Rewrite repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). What a mouthful! I hate these licenses. CC BY-NC-SA.
 
