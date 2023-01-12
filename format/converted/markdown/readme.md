@@ -22,7 +22,7 @@ Mature content is ahead. Please, be wary of these themes:
 
 By reading the Dizzy Rewrite, you acknowledge these warnings.
 
-[>> Read the Dizzy Rewrite](/STORY.md)
+[>> Read the Dizzy Rewrite](https*/meowcatheorange.github.io/Dizzy-Rewrite/STORY)
 
 ## Welcome
 Hello, welcome to the DAU/Dizzy Rewrite repository!
